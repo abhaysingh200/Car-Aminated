@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    height: 100vh;
+}
+
+.sky{
+    background-image: url(bg.jpg);
+    width: 800%;
+    height: 30vh;
+    background-repeat: repeat-x;
+
+}
+
+.trees{
+    background-image: url(trees.png);
+    width: 800%;
+    height: 70vh;  
+    background-repeat: repeat-x;
+    position: absolute;
+ 
+}
+
+.track{
+    background-image: url(track.png);
+    width: 800%;
+    height: 27vh;  
+    background-repeat: repeat-x;
+    position: absolute;
+    top:70vh;
+    animation: roadRunning linear 0s infinite;
+    
+}
+
+.car{
+    background-image: url(car.png);
+    width: 400px;
+    height: 100px;  
+    background-repeat: no-repeat;
+    background-size: cover;
+    bottom:28vh;
+    left: 20vw;
+    position: absolute;
+    animation: carMove linear 0 infinite;
+    
+}
+
+.leftwheel{
+    position: relative;
+    width: 77px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left:48px;
+    top:40px;
+    animation: Runnin linear 0s infinite;
+    
+}
+
+
+.rightwheel{
+    position: relative;
+    width: 77px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    left:250px;
+    bottom:38px;
+    animation: Runnin linear 0s infinite;
+   
+}
+
+
+@keyframes Runnin {
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes roadRunning {
+    100%{
+        transform: translateX(-500px);
+    }
+}
+
+@keyframes carMove {
+    0%{
+        transform: translateY(-5px);
+    }
+    50%{
+        transform: translateX(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+
+
+#play{
+    z-index: 10000;
+    position: relative;
+    width: 10%;
+    height: 10vh;
+}
+
+
+#play h2{
+    
+    width: 100%;
+    padding-left: 50px;
+    border-radius: 20px;
+    background-color: red;
+    position: relative;
+    z-index: 9999;
+    margin: 100% 400%;
+    font-size: 70px;
+}
+
+#play h2:hover{
+cursor: pointer;    
+}
